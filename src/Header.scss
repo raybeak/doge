@@ -1,0 +1,36 @@
+$defult_color: #fdebbe;
+
+div {
+  font-family: "Comic Sans MS";
+  .header {
+    height: 5em;
+    background-color: $defult_color;
+    position: sticky;
+    top: 0px;
+  }
+
+  .flexContainerLogo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 50rem 0rem 17rem;
+    .dogeLogo {
+      height: 4em;
+      width: 4em;
+      margin-top: 0.5em;
+    }
+    .flexContainerCoinValue {
+      display: flex;
+      text-align: center;
+      margin-top: 0.5em;
+      .coinValue {
+        margin-top: 0.3em;
+        margin-left: 0.5em;
+      }
+      .change {
+        margin-left: 0.3em;
+        margin-top: 0.3em;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+    }
+  }
+}
