@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import dogeLogo from './dogelogo.svg';
-import './Header.scss';
+import './scss/Header.scss';
 import axios from "axios";
 
 function Header(){
