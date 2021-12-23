@@ -54,7 +54,7 @@ function Header(){
               <img src={dogeLogo} className='dogeLogo' alt='dogeLogo'/>
               <div className='flexContainerCoinValue'>
                     <h3 className='coinValueDisc'>Doge Value Now (KRW) :</h3>
-                    <h1 className='coinValue'>null</h1>
+                    <h1 className='coinValue'>L-O-A-D-I-N-G</h1>
               </div>
             </div>  
         </div>
