@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import dogeLogo from './dogelogo.svg';
+import coinLogo from './logo/dogeLogo.svg';
 import './scss/Header.scss';
 import axios from "axios";
 
-function Header(){
+function Header(props){
     const [upbitCoinData,setUpbitCoinData]=useState(null);
     const [apiError,setApiError]=useState(null);
 
@@ -13,7 +13,7 @@ function Header(){
             method: 'GET',
             url: 'https://api.upbit.com/v1/ticker',
             headers: {Accept: 'application/json'},
-            params: {markets: 'KRW-DOGE'},
+            params: {markets: props.coinName},
             };
 
         await axios.request(options).then(function (response) {
@@ -36,11 +36,11 @@ function Header(){
 
         if (apiError !== null) { 
         return(
-        <div className='header'>
+        <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={dogeLogo} className='dogeLogo' alt='dogeLogo'/>
+              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
-                    <h3 className='coinValueDisc'>Doge Value Now (KRW) :</h3>
+                    <h3 className='coinValueDisc'>{props.coinName} Value Now (KRW) :</h3>
                     <h3 className='coinValue'>Error{apiError}</h3>
               </div>
             </div>  
@@ -49,22 +49,22 @@ function Header(){
         }
         if(upbitCoinData === null){
         return(
-        <div className='header'>
+        <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={dogeLogo} className='dogeLogo' alt='dogeLogo'/>
+              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
-                    <h3 className='coinValueDisc'>Doge Value Now (KRW) :</h3>
-                    <h1 className='coinValue'>L-O-A-D-I-N-G</h1>
+                    <h3 className='coinValueDisc'>{props.coinName} Value Now (KRW) :</h3>
+                    <h3 className='coinValue' style={{marginTop:'1vw'}}>L-O-A-D-I-N-G</h3>
               </div>
             </div>  
         </div>
     )}
         return(
-        <div className='header'>
+        <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={dogeLogo} className='dogeLogo' alt='dogeLogo'/>
+              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
-                    <h3 className='coinValueDisc'>Doge Value Now (KRW) :</h3>
+                    <h3 className='coinValueDisc'>{props.coinName} Value Now :</h3>
                     <h1 className='coinValue'>{upbitCoinData[0].trade_price}</h1>
                     <h1 className='change' style={upbitCoinData[0].change==='EVEN'?{color:'white'}:upbitCoinData[0].change==='FALL'?{color:'red'}:{color:'green'}}>{upbitCoinData[0].change}</h1>
               </div>

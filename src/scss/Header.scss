@@ -6,7 +6,7 @@ div {
     height: auto;
     width: 100vw;
     background-color: $color-doge;
-    position: sticky;
+    position: static;
     top: 0px;
     border-style: none none solid none;
     border-width: 0.1rem;
@@ -15,10 +15,9 @@ div {
   .flexContainerLogo {
     display: flex;
     justify-content: space-between;
-    margin: 0rem 40vw 0rem 17vw;
-
+    margin: 0rem 41vw 0rem 17vw;
     @media only screen and(max-width:$screen-xl) {
-      margin: 0 35vw 0 2vw;
+      margin: 0 37vw 0 2vw;
     }
     @media only screen and(max-width:$screen-lg) {
       margin: 0rem 2rem 0rem 1rem;
@@ -28,10 +27,9 @@ div {
     }
     @media only screen and(max-width:$screen-sm) {
       flex-wrap: wrap;
-      margin-top: 3vw;
     }
 
-    .dogeLogo {
+    .coinLogo {
       height: 4em;
       width: 4em;
       margin-top: 0.5em;

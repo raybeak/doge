@@ -7,7 +7,13 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header/>
+    <Header coinName='KRW-DOGE' />
+    <App />
+    <Header coinName='KRW-BTC'  coinColor='#f7931a'/>
+    <App />
+    <Header coinName='KRW-ETH'  coinColor='#c99d66'/>
+    <App />
+    <Header coinName='KRW-LTC'  coinColor='#00aeff'/>
     <App />
     
   </React.StrictMode>,
