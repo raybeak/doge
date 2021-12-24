@@ -5,19 +5,21 @@
   background-color: $color-doge;
   padding-top: 3vw;
   padding-bottom: 3vw;
+  border-style: none none solid none;
+  border-width: 0.1rem;
   @media only screen and(max-width:$screen-md) {
     text-align: center;
   }
   .flexcontainer {
     display: flex;
     justify-content: space-between;
-    margin: 0 50vw 0 10vw;
+    margin: 0 50vw 0 15vw;
     @media only screen and(max-width:$screen-md) {
       display: block;
     }
     .contentimg {
-      max-width: 500px;
-      max-height: 500px;
+      max-width: 300px;
+      max-height: 300px;
     }
   }
 }
