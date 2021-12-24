@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import coinLogo from './logo/dogeLogo.svg';
 import './scss/Header.scss';
 import axios from "axios";
 
 function Header(props){
     const [upbitCoinData,setUpbitCoinData]=useState(null);
     const [apiError,setApiError]=useState(null);
-
+    
     const getCoinData = async()=>{
         
         const options = {
@@ -38,7 +37,7 @@ function Header(props){
         return(
         <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
+              <img src={require('./logo/'+props.logo)} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
                     <h3 className='coinValueDisc'>{props.coinName} Value Now (KRW) :</h3>
                     <h3 className='coinValue'>Error{apiError}</h3>
@@ -51,7 +50,7 @@ function Header(props){
         return(
         <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
+              <img src={require('./logo/'+props.logo)} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
                     <h3 className='coinValueDisc'>{props.coinName} Value Now (KRW) :</h3>
                     <h3 className='coinValue' style={{marginTop:'1vw'}}>L-O-A-D-I-N-G</h3>
@@ -62,7 +61,7 @@ function Header(props){
         return(
         <div className='header' style={{backgroundColor:props.coinColor}}>
             <div className='flexContainerLogo'>
-              <img src={coinLogo} className='coinLogo' alt='coinLogo'/>
+              <img src={require('./logo/'+props.logo)} className='coinLogo' alt='coinLogo'/>
               <div className='flexContainerCoinValue'>
                     <h3 className='coinValueDisc'>{props.coinName} Value Now :</h3>
                     <h1 className='coinValue'>{upbitCoinData[0].trade_price}</h1>
