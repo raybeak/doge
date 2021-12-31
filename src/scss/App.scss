@@ -1,25 +1,29 @@
-@import "variables";
+@import "_variables.scss";
 
 .contentsMain {
   font-family: $font-family;
   background-color: $color-doge;
+  width: auto;
+  height: auto;
   padding-top: 3vw;
   padding-bottom: 3vw;
   border-style: none none solid none;
   border-width: 0.1rem;
+  white-space: pre-wrap;
   @media only screen and(max-width:$screen-md) {
     text-align: center;
   }
   .flexcontainer {
+    flex-wrap: wrap-reverse;
     display: flex;
     justify-content: space-between;
     margin: 0 10vw 0 15vw;
     @media only screen and(max-width:$screen-md) {
       display: block;
     }
-    .contentimg {
-      max-width: 300px;
-      max-height: 300px;
-    }
+  }
+  .contentimg {
+    max-width: 300px;
+    max-height: 300px;
   }
 }

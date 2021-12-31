@@ -31,7 +31,7 @@ function Header(props){
         return ()=>{
             clearInterval(interval.current)
         };
-    },[])
+    })
 
         if (apiError !== null) { 
         return(

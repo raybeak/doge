@@ -1,0 +1,16 @@
+@import "_variables.scss";
+
+.footer {
+  background-color: lightgray;
+  color: gray;
+  .flexcontainer {
+    margin-left: 3vw;
+    display: flex;
+    .footerlogo {
+      margin-top: 20px;
+      margin-right: 10px;
+      max-height: 30px;
+      max-width: auto;
+    }
+  }
+}
