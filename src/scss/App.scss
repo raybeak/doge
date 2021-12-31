@@ -18,6 +18,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 10vw 0 15vw;
+    @media only screen and(min-width:$screen-xl) {
+      max-width: 1200px;
+      margin: 0 20vw 0 20vw;
+    }
     @media only screen and(min-width:$screen-4k) {
       max-width: 1400px;
       margin: 0 0vw 0 25vw;
