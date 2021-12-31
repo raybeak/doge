@@ -6,23 +6,23 @@ function App(props) {
   if(props.alt===true){
       return (
       <div className='contentsMain' style={{backgroundColor:props.backgroundColor}}>
-        <div className='flexcontainer'>
+        <div className='flexContainer'>
           <div className='linerAlt'>
-            <h1>{props.title}</h1>
-            <h3>{props.disc}</h3>
+            <h1 className='contentTitle'>{props.title}</h1>
+            <h3 className='contentDisc'>{props.disc}</h3>
           </div>
-          <img src={require('./img/'+props.img)} className='contentimg' alt='contentimg' />
+          <img src={require('./img/'+props.img)} className='contentImg' alt='contentimg' />
         </div>
       </div>
     );
   }else{
     return (
       <div className='contentsMain' style={{backgroundColor:props.backgroundColor}}>
-        <div className='flexcontainer'>
-          <img src={require('./img/'+props.img)} className='contentimg' alt='contentimg' />
+        <div className='flexContainer'>
+          <img src={require('./img/'+props.img)} className='contentImg' alt='contentimg' />
           <div className='liner'>
-            <h1>{props.title}</h1>
-            <h3>{props.disc}</h3>
+            <h1 className='contentTitle'>{props.title}</h1>
+            <h3 className='contentDisc'>{props.disc}</h3>
           </div>
         </div>
      </div>

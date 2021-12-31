@@ -13,17 +13,26 @@
   @media only screen and(max-width:$screen-md) {
     text-align: center;
   }
-  .flexcontainer {
+  .flexContainer {
     flex-wrap: wrap-reverse;
     display: flex;
     justify-content: space-between;
     margin: 0 10vw 0 15vw;
+    @media only screen and(min-width:$screen-4k) {
+      max-width: 1400px;
+      margin: 0 0vw 0 25vw;
+    }
     @media only screen and(max-width:$screen-md) {
       display: block;
     }
   }
-  .contentimg {
+  .contentImg {
     max-width: 300px;
     max-height: 300px;
+  }
+  .contentDisc {
+    @media only screen and(width:$screen-lg) {
+      max-width: 400px;
+    }
   }
 }
