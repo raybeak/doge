@@ -15,9 +15,9 @@ div {
   .flexContainerLogo {
     display: flex;
     justify-content: space-between;
-    margin: 0rem 41vw 0rem 17vw;
+    margin: 0rem 38vw 0rem 17vw;
     @media only screen and(max-width:$screen-xl) {
-      margin: 0 37vw 0 2vw;
+      margin: 0 34vw 0 2vw;
     }
     @media only screen and(max-width:$screen-lg) {
       margin: 0rem 2rem 0rem 1rem;
