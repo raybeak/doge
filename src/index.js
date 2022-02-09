@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <Header coinName='코인이름(KRW-BTC)' logo='로고' coinColor='바탕색'/> */}
     {/* <App img='이미지' title='제목' disc={``} backgroundColor='바탕색'/> */}
-    <Header coinName='KRW-DOGE' logo='doge.svg' coinColor='#005580'/>
+    <Header coinName='폭스홀 보병 기초' logo='logo.svg' coinColor='#808000'/>
     <App 
       img='doge.svg' 
       title='도지코인은 뭔가요?' 
